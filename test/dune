@@ -1,0 +1,3 @@
+(tests
+  (names dpll_test)
+  (libraries oUnit dpll))
