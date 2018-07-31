@@ -1,3 +1,4 @@
+open OUnit2
 open Dpll
 open Syntax
 open Solver
@@ -29,17 +30,22 @@ let f5 = [
   [4]
 ]
 
-let () =
-  let cnfs = [f1; f2; f4; f5] in
-  List.iter (fun cnf -> (match solve cnf with
-      | Sat _ -> print_string "SAT: "
-      | Unsat _ -> print_string "UNSAT: ");
-      Cnf.print_cnf cnf; print_newline ()
-    ) cnfs
+let cnf_test1 _ =
+  assert_equal (solve f1) (Sat f1);
+  assert_equal (solve f2) (Sat f2);
+  assert_equal (solve f4) (Sat f4);
+  assert_equal (solve f5) (Unsat f5)
 
+let cnf_test2 _ =
+  assert_equal
+    (Cnf.literal_of_lists
+       [Literal (1); Literal (2); EOL; Literal (-1); Literal (2); EOL])
+    [[1; 2]; [-1; 2]]
+
+let suite =
+  "suite" >:::
+  ["test1" >:: cnf_test1;
+   "test2" >:: cnf_test2;]
 
 let () =
-  assert (
-    Cnf.literal_of_lists
-      [Literal (1); Literal (2); EOL; Literal (-1); Literal (2); EOL]
-    = [[1; 2]; [-1; 2]])
+  run_test_tt_main suite
