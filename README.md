@@ -3,7 +3,7 @@
 ## Setup and install
 
 ```sh
-$ opam install jbuilder
+$ opam install jbuilder menhir
 $ make
 ```
 
