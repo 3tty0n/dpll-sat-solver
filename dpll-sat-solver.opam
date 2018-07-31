@@ -10,5 +10,5 @@ build:
   [[ "jbuilder" "build" "--only-packages" "%{name}%" "--root" "." "-j" jobs "@install" ]]
 depends: [
   "jbuilder" {build}
-  "oUnit"
+  "menhir"
 ]

@@ -5,3 +5,6 @@ lib: [
 bin: [
   "_build/install/default/bin/dpll-sat-solver" {"dpll-sat-solver"}
 ]
+doc: [
+  "_build/install/default/doc/dpll-sat-solver/README.md"
+]
