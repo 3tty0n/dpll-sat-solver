@@ -27,15 +27,6 @@ let rec dpll (f : cnf) =
     let v = new_f |> List.hd |> List.hd in
     dpll (assign new_f v) || dpll (assign new_f (-v))
 
-let print_cnf cnf =
-  print_string "[";
-  List.iter begin fun cls ->
-    print_string "[";
-    print_string (String.concat "; " (List.map string_of_int cls));
-    print_string "];";
-  end cnf;
-  print_string "]"
-
 let solve (f : cnf) =
   if dpll f then Sat f
   else Unsat f

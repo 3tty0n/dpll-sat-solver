@@ -1,0 +1,10 @@
+(executables
+ ((names (dpll_test))
+  (libraries (oUnit dpll))
+ ))
+
+(alias
+ ((name runtest)
+  (deps (dpll_test.exe))
+  (action (run ${<}))
+))

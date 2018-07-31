@@ -1,4 +1,6 @@
 open Dpll
+open Syntax
+open Solver
 
 let f1 = [
   [-1; 2];
@@ -32,5 +34,12 @@ let () =
   List.iter (fun cnf -> (match solve cnf with
       | Sat _ -> print_string "SAT: "
       | Unsat _ -> print_string "UNSAT: ");
-      print_cnf cnf; print_newline ()
+      Cnf.print_cnf cnf; print_newline ()
     ) cnfs
+
+
+let () =
+  assert (
+    Cnf.literal_of_lists
+      [Literal (1); Literal (2); EOL; Literal (-1); Literal (2); EOL]
+    = [[1; 2]; [-1; 2]])

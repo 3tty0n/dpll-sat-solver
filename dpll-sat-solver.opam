@@ -1,0 +1,14 @@
+opam-version: "1.2"
+maintainer: "yuizalp@gmail.com"
+authors: ["Yusuke Izawa"]
+homepage: "https://github.com/3tty0n/dpll-sat-solver"
+bug-reports: "https://github.com/3tty0n/dpll-sat-solver/issues"
+dev-repo: "https://github.com/prg-titech/baccaml.git"
+license: "Apache 2.0"
+version: "0.1"
+build:
+  [[ "jbuilder" "build" "--only-packages" "%{name}%" "--root" "." "-j" jobs "@install" ]]
+depends: [
+  "jbuilder" {build}
+  "oUnit"
+]
