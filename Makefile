@@ -1,12 +1,14 @@
+DUNE = dune
+
 .default: build
 
 build:
-	jbuilder build
+	$(DUNE) build
 
 test:
-	jbuilder runtest -f
+	$(DUNE) runtest -f
 
 clean:
-	jbuilder clean
+	$(DUNE) clean
 
 .PHONY: build test clean

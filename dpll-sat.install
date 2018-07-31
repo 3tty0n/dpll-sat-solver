@@ -1,0 +1,10 @@
+lib: [
+  "_build/install/default/lib/dpll-sat/META" {"META"}
+  "_build/install/default/lib/dpll-sat/opam" {"opam"}
+]
+bin: [
+  "_build/install/default/bin/dpll-sat" {"dpll-sat"}
+]
+doc: [
+  "_build/install/default/doc/dpll-sat/README.md"
+]

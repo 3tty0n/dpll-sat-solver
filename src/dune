@@ -1,0 +1,13 @@
+(ocamllex (modules lexer))
+(menhir (modules parser))
+
+(library
+  (name dpll)
+  (modules (:standard \ main))
+  (libraries unix))
+
+(executable
+  (name main)
+  (public_name dpll-sat)
+  (modules Main)
+  (libraries dpll))

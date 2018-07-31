@@ -3,12 +3,12 @@
 ## Setup and install
 
 ```sh
-$ opam install jbuilder menhir
+$ opam install dune menhir
 $ make
 ```
 
 ## Example
 
 ```sh
-$ jbuilder exec dpll-sat-solver cnf/8-queens.cnf
+$ dune exec dpll-sat cnf/8-queens.cnf
 ```

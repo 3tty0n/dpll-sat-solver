@@ -25,7 +25,7 @@ let is_pure (f : cnf) (v : literal) =
     List.map (List.find_opt (fun e -> e = (-v))) f
     |> List.for_all (fun e -> e = None)
 
-let rec apply_pure_literal_rule (f : cnf) (v : literal) =
+let apply_pure_literal_rule (f : cnf) (v : literal) =
   if v < 0 then None
   else begin
     if is_pure f v then Some (f |> List.filter (List.mem v))
