@@ -3,7 +3,7 @@
 }
 
 let space = ['\t' '\n' '\r' ' ']
-let literal_num = ['-' '1'-'9']
+let literal_num = ['-' '0'-'9']
 
 rule token = parse
 | space+ { token lexbuf (* use recursion to ignore *) }
