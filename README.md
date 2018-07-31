@@ -3,7 +3,7 @@
 ## Setup and install
 
 ```sh
-$ opam install dune menhir
+$ opam install dune menhir ANSITerminal
 $ make
 ```
 

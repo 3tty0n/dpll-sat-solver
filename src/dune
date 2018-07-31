@@ -10,4 +10,4 @@
   (name main)
   (public_name dpll-sat)
   (modules Main)
-  (libraries dpll))
+  (libraries dpll ANSITerminal))
