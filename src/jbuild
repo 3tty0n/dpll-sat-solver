@@ -6,4 +6,11 @@
 
 (library
  ((name dpll)
- (libraries (oUnit))))
+  (modules (:standard \ main))
+  (libraries (oUnit))))
+
+(executable
+ ((name main)
+  (public_name dpll-sat-solver)
+  (modules Main)
+  (libraries (dpll))))

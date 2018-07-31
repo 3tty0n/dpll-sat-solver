@@ -1,12 +1,12 @@
 .default: build
 
 build:
-	dune build
+	jbuilder build
 
 test:
-	dune runtest -f
+	jbuilder runtest -f
 
 clean:
-	dune clean
+	jbuilder clean
 
 .PHONY: build test clean
