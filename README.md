@@ -13,4 +13,4 @@ $ make
 $ dune exec dpll-sat cnf/8-queens.cnf
 ```
 
-[![Image from Gyazo](https://i.gyazo.com/2c893dab519766430a2b1dd1db815ffd.png)](https://gyazo.com/2c893dab519766430a2b1dd1db815ffd)
+[![Image from Gyazo](https://i.gyazo.com/6be2743704311deddb902aec12a3a972.png)](https://gyazo.com/6be2743704311deddb902aec12a3a972)
